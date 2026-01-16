@@ -65,3 +65,6 @@ go.work.sum
 
 # VS Code Files
 *.code-workspace
+
+# Ignore lock files in the data-layer specifically as it's not being tracked.
+data-layer/.terraform.lock.hcl
