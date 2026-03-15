@@ -75,8 +75,10 @@ resource "azurerm_container_app" "jenkins_app" {
       }
     }
     volume {
-      name         = "jenkins-volume-mount"
-      storage_name = "jenkins-volume"
+      name          = "jenkins-volume-mount"
+      storage_name  = "jenkins-volume"
+      storage_type  = "AzureFile"
+      mount_options = "uid=1000,gid=1000,mfsymlinks,nobrl"
     }
   }
 
