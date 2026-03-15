@@ -8,14 +8,14 @@ However, I have provided a template in `data-layer` to potentially manage the st
 The entire purpose of this repository is to be used as a learning tool for others consider what is here as a foundation specifically using the Microsoft Azure Infrastructure. 
 
 ---
-###Background:
+### Background:
 This template instantiates a [Azure Container App](https://azure.microsoft.com/en-us/products/container-apps) that pulls in the Jenkins image from Docker hub that is tied to Azure storage for the platform's data storage.
 The idea behind this is that it uses cloud infrastructure to orchestrate storage, compute resources and improving the installation of configuration through plugins like the [Configuration as Code](https://plugins.jenkins.io/configuration-as-code/) plugin that handle some of the tedious installation and updating. 
 
 As mentioned above, this infrastructure in the `app-layer` requires a storage link, that is laid out in the `data-layer` folder, but not created through this script. Look through the `app-layer` template as well for `jenkins-volume-mount` should provide more information.
 
 
-###Notes:
+### Notes:
 This also provides Jenkins scripts to load plugins upon initial startup. These plugins are contained within the `plugins.txt` file along with Jenkins scripts to install upon boot.
 
 As mentioned above, this set up uses the standard storage tier which is a bit slower. I ended up connecting this to a SMB File Share within my Container app infrastructure. 
@@ -27,7 +27,7 @@ As mentioned above, this set up uses the standard storage tier which is a bit sl
 How to complete via Azure Cloud Shell:
 <ol>
 <li>Go to Azure Portal and Signin</li>
-<li>Create a CLI request or go directly to the shell through [Azure CLI](http://shell.azure.com)</li>
+<li>Create a CLI request or go directly to the shell through Azure CLI-(http://shell.azure.com)</li>
 <li>Wait for the shell to load up and add your SubID to your CLI instance.</li>
 <li>From your home directory clone this repository ...</li>
 <li>From `terraform-plans/app-layer/`~~~~~~~~~~ run the followings:</li>
