@@ -1,0 +1,20 @@
+jenkins:
+  systemMessage: "Jenkins successfully configured via Azure File Share & JCasC!"
+  numExecutors: 2
+  mode: NORMAL
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+        - id: "terraform_user"
+          password: "ComplexPassword123!"
+          name: "Terraform Admin"
+          properties:
+            - mailer:
+                emailAddress: "admin@example.com"
+
+unclassified:
+  location:
+    url: "${JENKINS_URL}"
