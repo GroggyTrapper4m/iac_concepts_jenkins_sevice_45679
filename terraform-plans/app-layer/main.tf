@@ -69,6 +69,16 @@ resource "azurerm_container_app" "jenkins_app" {
         value = var.jenkins_admin_password
       }
 
+      env {
+        name  = "JENKINS_URL"
+        value = "https://${azurerm_container_app.jenkins.latest_revision_fqdn}"
+      }
+
+      env {
+        name  = "CASC_JENKINS_CONFIG"
+        value = "/var/jenkins_home/jenkins.yaml"
+      }
+
       volume_mounts {
         name = "jenkins-volume-mount"
         path = "/var/jenkins_home"
