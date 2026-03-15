@@ -57,7 +57,7 @@ resource "azurerm_container_app" "jenkins_app" {
 
       env {
         name  = "JAVA_OPTS"
-        value = "-Xmx3g -Xms1g -Djenkins.install.runSetupWizard=false -Dhudson.util.RingBufferLogHandler.defaultSize=50 -Dorg.apache.commons.jelly.tags.fmt.timeZone=America/New_York -Dhudson.FilePath.VALIDATE_ANT_FILE_MASK=false"
+        value = "-Xmx3g -Xms1g -Djenkins.install.runSetupWizard=true -Dhudson.util.RingBufferLogHandler.defaultSize=50 -Dorg.apache.commons.jelly.tags.fmt.timeZone=America/New_York -Dhudson.FilePath.VALIDATE_ANT_FILE_MASK=false"
       }
 
       env {
