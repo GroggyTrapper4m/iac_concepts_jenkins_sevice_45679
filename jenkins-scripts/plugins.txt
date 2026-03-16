@@ -1,0 +1,9 @@
+configuration-as-code:latest
+commons-text-api:latest
+snakeyaml-api:latest
+json-api:latest
+commons-lang3-api:latest
+caffeine-api:latest
+prism-api:latest
+git:latest
+workflow-aggregator:latest
